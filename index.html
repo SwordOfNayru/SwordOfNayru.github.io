@@ -4,9 +4,554 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Accueil</title>
+        <title>Pierre-Louis Berquez - Portefauille de compétences</title>
+        <link type="text/css" rel="stylesheet" href="public/style.css" />
     </head>
     <body>
-        <h1>TEST</h1>
+        <style>
+            /* nav fixed to the middle left of the screen  */
+            nav {
+                position: fixed;
+                top: 34%;
+                left: 0px;
+                padding: 10px;
+                transform: translateY(-50%);
+                z-index: 100;
+                background-color: #fcfcfc;
+            }
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            nav li {
+                margin-bottom: 1rem;
+            }
+            nav a {
+                text-decoration: none;
+                color: #768390;
+                font-size: 1.5rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                transition: all 0.2s;
+            }
+            nav a:hover {
+                color: #000;
+                border-bottom: solid 1px #000;
+            }
+        </style>
+        <!-- <nav>
+            <ul>
+                <li>
+                    <a href="#about">A propos</a>
+                </li>
+                <li>
+                    <a href="#xpPro">Expériences</a>
+                </li>
+                <li>
+                    <a href="#formation">Formation</a>
+                </li>
+                <li>
+                    <a href="#skills">Compétences</a>
+                </li>
+            </ul>
+        </nav> -->
+
+        <div class="mod-container">
+            <div class="mod">
+                <div class="cube">
+                    <div class="faces f1">
+                        <div class="dot p1"></div>
+                        <div class="dot p2"></div>
+                        <div class="dot p3"></div>
+
+                        <div class="dot p4"></div>
+                        <div class="dot p5"></div>
+                        <div class="dot p6"></div>
+
+                        <div class="dot p7"></div>
+                        <div class="dot p8"></div>
+                        <div class="dot p9"></div>
+                    </div>
+
+                    <div class="faces f2">
+                        <div class="dot p10"></div>
+                        <div class="dot p11"></div>
+                        <div class="dot p12"></div>
+                        <div class="dot p13"></div>
+                    </div>
+
+                    <div class="faces f3">
+                        <div class="dot p1"></div>
+                        <div class="dot p2"></div>
+                        <div class="dot p3"></div>
+
+                        <div class="dot p4"></div>
+                        <div class="dot p5"></div>
+                        <div class="dot p6"></div>
+
+                        <div class="dot p7"></div>
+                        <div class="dot p8"></div>
+                        <div class="dot p9"></div>
+                    </div>
+
+                    <div class="faces f4">
+                        <div class="dot p10"></div>
+                        <div class="dot p11"></div>
+                        <div class="dot p12"></div>
+                        <div class="dot p13"></div>
+                    </div>
+
+                    <div class="faces f5">
+                        <div class="dot p1"></div>
+                        <div class="dot p2"></div>
+                        <div class="dot p3"></div>
+
+                        <div class="dot p4"></div>
+                        <div class="dot p5"></div>
+                        <div class="dot p6"></div>
+
+                        <div class="dot p7"></div>
+                        <div class="dot p8"></div>
+                        <div class="dot p9"></div>
+                    </div>
+
+                    <div class="faces f6">
+                        <div class="dot p10"></div>
+                        <div class="dot p11"></div>
+                        <div class="dot p12"></div>
+                        <div class="dot p13"></div>
+                    </div>
+
+                    <div class="faces f7">
+                        <div class="dot p1"></div>
+                        <div class="dot p2"></div>
+                        <div class="dot p3"></div>
+
+                        <div class="dot p4"></div>
+                        <div class="dot p5"></div>
+                        <div class="dot p6"></div>
+
+                        <div class="dot p7"></div>
+                        <div class="dot p8"></div>
+                        <div class="dot p9"></div>
+                    </div>
+
+                    <div class="faces f8">
+                        <div class="dot p10"></div>
+                        <div class="dot p11"></div>
+                        <div class="dot p12"></div>
+                        <div class="dot p13"></div>
+                    </div>
+
+                    <div class="faces f9">
+                        <div class="dot p1"></div>
+                        <div class="dot p2"></div>
+                        <div class="dot p3"></div>
+
+                        <div class="dot p4"></div>
+                        <div class="dot p5"></div>
+                        <div class="dot p6"></div>
+
+                        <div class="dot p7"></div>
+                        <div class="dot p8"></div>
+                        <div class="dot p9"></div>
+                    </div>
+
+                    <div class="faces f10">
+                        <div class="dot p10"></div>
+                        <div class="dot p11"></div>
+                        <div class="dot p12"></div>
+                        <div class="dot p13"></div>
+                    </div>
+
+                    <div class="faces f11">
+                        <div class="dot p1"></div>
+                        <div class="dot p2"></div>
+                        <div class="dot p3"></div>
+
+                        <div class="dot p4"></div>
+                        <div class="dot p5"></div>
+                        <div class="dot p6"></div>
+
+                        <div class="dot p7"></div>
+                        <div class="dot p8"></div>
+                        <div class="dot p9"></div>
+                    </div>
+                </div>
+
+                <div class="project-name">
+                    <div class="l1">Pierre-louis</div>
+                    <div class="l2">BERQUEZ</div>
+                    <div
+                        class="l2"
+                        style="
+                            font-weight: 300;
+                            text-transform: none;
+                            letter-spacing: normal;
+                        "
+                    >
+                        Portefeuille de compétences
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="test-container">
+                <div class="flex-side" style="width: 100%">
+                    <img
+                        src="./public/image/imageCV.png"
+                        style="height: 200px; margin: 50px"
+                        alt=""
+                    />
+                    <div id="about">
+                        Je suis une personne curieuse et passionnée par les
+                        défis techniques. Mon expérience professionnelle acquise
+                        lors de mon alternance dans le domaine postal m’a permis
+                        de développer mes compétences et de les mettre en
+                        pratique dans des situations réelles. Je suis
+                        enthousiaste à l’idée de rejoindre Digiposte, une
+                        filiale de La Poste, pour continuer à apprendre et à
+                        grandir dans ma carrière.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row example-basic">
+                <div class="col-md-12 example-title">
+                    <h2 id="xpPro">Expériences professionnelles</h2>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="test-container">
+                    <ul class="timeline">
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">Alternance</h2>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>Septembre 2021 - Octobre 2023</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Développeur Full Stack
+                                </h3>
+                                <h4>Université Picardie Jules Verne</h4>
+                                <p>
+                                    RiPOSTE est un très petite entreprise du
+                                    domaine postal. Elle est spécialisée dans
+                                    l'optimisation des dépôts de courrier. Elle
+                                    propose un service de consulting dans ce
+                                    domaine ainsi qu'une application de suivis
+                                    des dépôts de courrier. Au vu de la taille
+                                    de l'entreprise, j'ai pu toucher à tous les
+                                    aspects du développement d'une application
+                                    web. Que ce soit le développement front-end,
+                                    back-end, la gestion de la base de données,
+                                    gestion DevOps, gestion de projet. Voici mes
+                                    missions :
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        Développement d'une application web
+                                        (Front et Back) en C# .NET Core et VueJs
+                                    </li>
+                                    <li>Maintenance applicative</li>
+                                    <li>Evolution des pipeline CI/CD</li>
+                                    <li>Formation des nouveaux arrivants</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">Stage</h2>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>Avril 2021 - Aout 2021</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Developpeur Full-Stack
+                                </h3>
+                                <h4>RiPOSTE Consulting &amp; Service</h4>
+                                <p>
+                                    Ce stage a été réalisé dans le cadre de ma
+                                    Licence MIAGE. J'ai pu travailler sur le
+                                    développement d'une application web en C#
+                                    .NET Core et VueJs. Ma mission était de
+                                    faire evolué l'application existante en
+                                    ajoutant de nouvelles fonctionnalités.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ----------------- -->
+            <!-- FORMATION -->
+            <!-- ----------------- -->
+
+            <div class="row example-basic">
+                <div class="col-md-12 example-title">
+                    <h2 id="xpPro">Formations</h2>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="test-container">
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>Septembre 2021 - Septembre 2023</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Master MIAGE - Spécialité Systèmes
+                                    d'Information Ouverts
+                                </h3>
+                                <h4>Université Picardie Jules Verne</h4>
+                                <p>
+                                    Titulaire d’un Master MIAGE (Méthodes
+                                    Informatiques Appliquées à la Gestion des
+                                    Entreprises), je possède une double
+                                    compétence en informatique et en gestion.
+                                    Cette formation de haut niveau m’a permis de
+                                    développer des compétences en ingénierie et
+                                    management des systèmes d’information, ainsi
+                                    qu’une capacité d’adaptation et une aptitude
+                                    à communiquer. Je suis prêt(e) à mettre mes
+                                    compétences au service de votre entreprise.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>Septembre 2020 - Septembre 2021</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Licence 3 MIAGE</h3>
+                                <h4>Université Picardie Jules Verne</h4>
+                                <p>
+                                    Titulaire d’une Licence 3 MIAGE (Méthodes
+                                    Informatiques Appliquées à la Gestion des
+                                    Entreprises), je possède une solide base de
+                                    connaissances en informatique ainsi qu’une
+                                    introduction poussée à l’économie et la
+                                    gestion. Cette formation m’a permis de
+                                    développer des compétences en conduite de
+                                    projets dans les organisations et en
+                                    informatique décisionnelle. Je suis prêt(e)
+                                    à mettre mes compétences au service de votre
+                                    entreprise.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>Septembre 2018 - Septembre 2020</span>
+                            </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    BTS - Services Informatiques aux
+                                    Organisations
+                                </h3>
+                                <h4>Lycée Privé Saint Rémi - Amiens</h4>
+                                <p>
+                                    Titulaire d’un BTS SIO option SLAM (Services
+                                    Informatiques aux Organisations - Solutions
+                                    Logicielles et Applications Métiers), je
+                                    possède des compétences en développement de
+                                    solutions logicielles et en gestion de
+                                    projets informatiques. Cette formation m’a
+                                    permis de développer des compétences en
+                                    veille technologique, en réponse aux
+                                    incidents et en développement de la présence
+                                    de l’entreprise sur le web. Je suis prêt(e)
+                                    à mettre mes compétences au service de votre
+                                    entreprise.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ----------------- -->
+            <!-- COMPETENCES -->
+            <!-- ----------------- -->
+
+            <div class="row example-basic">
+                <div class="col-md-12 example-title">
+                    <h2 id="xpPro">Compétences</h2>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="test-container">
+                    <ul class="timeline">
+                        <li class="timeline-item period">
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">Savoir-faire</h2>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Rédiger un cahier des charges, des
+                                    spécifications techniques
+                                </h3>
+                                <p>
+                                    Ma formation prévoit la rédaction de cahiers
+                                    des charges et de spécifications techniques.
+                                    J'ai donc acquis les compétences nécessaires
+                                    pour rédiger ces documents. Voici la matière
+                                    que j'ai étudié pour cela :
+                                    <img
+                                        src="public/image/justification/1.png"
+                                        class="image-competences"
+                                    />
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Réaliser des études et développements
+                                    informatiques
+                                </h3>
+                                <p>
+                                    L'ensemble de mes formations est basé sur le
+                                    développement informatique. J'ai donc acquis
+                                    les compétences nécessaires pour réaliser
+                                    des études et des développements
+                                    informatiques. Voici une des matières que
+                                    j'ai étudié pour cela :
+                                    <img
+                                        src="public/image/justification/2.png"
+                                        class="image-competences"
+                                    />
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">A définir</h3>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">Savoir-être</h2>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Travailler en équipe
+                                </h3>
+                                <p>
+                                    J'ai apris à travailler en équipe lors de
+                                    mon alternance. J'ai donc acquis les
+                                    compétences nécessaires pour travailler en
+                                    équipe. Voici un extrait d'un fiche
+                                    d'appreciation de mon alternance :
+                                    <img
+                                        src="public/image/justification/3.png"
+                                        class="image-competences"
+                                    />
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">A définir</h3>
+                                <h4></h4>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">Savoir</h2>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">A définir</h3>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row example-basic">
+                <div class="col-md-12 example-title">
+                    <h2 id="sources">Sources et documents</h2>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="test-container">
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Site de la formation Master MIAGE
+                                </h3>
+                                <p>
+                                    <a
+                                        href="https://miage-amiens.fr/master-miage-amiens/"
+                                        target="_blank"
+                                        >https://miage-amiens.fr/master-miage-amiens/</a
+                                    >
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">
+                                    Fiche d'appreciation de mon alternance
+                                </h3>
+                                <p>
+                                    <img
+                                        src="public/image/justification/fiche.png"
+                                        class="image-competences"
+                                    />
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
