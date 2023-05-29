@@ -6,25 +6,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pierre-Louis Berquez - Portefauille de compétences</title>
         <link type="text/css" rel="stylesheet" href="public/style.css" />
+        <link href="public/fontawesome/css/fontawesome.css" rel="stylesheet" />
+        <link href="public/fontawesome/css/brands.css" rel="stylesheet" />
+        <link href="public/fontawesome/css/solid.css" rel="stylesheet" />
     </head>
     <body>
         <style>
             /* nav fixed to the middle left of the screen  */
             nav {
                 position: fixed;
-                top: 34%;
-                left: 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 240px;
+                top: 50%;
+                left: -225px;
                 padding: 10px;
                 transform: translateY(-50%);
                 z-index: 100;
-                background-color: #fcfcfc;
+                -moz-transition: all 0.5s ease;
+                transition: all 0.5s ease;
             }
             nav ul {
+                background-color: #fcfcfc;
                 list-style: none;
                 padding: 0;
+                padding-right: 10px;
                 margin: 0;
                 display: flex;
                 flex-direction: column;
+                width: 225px;
             }
             nav li {
                 margin-bottom: 1rem;
@@ -42,8 +53,15 @@
                 color: #000;
                 border-bottom: solid 1px #000;
             }
+            nav:hover {
+                left: 0;
+                background-color: #fcfcfc;
+                -moz-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+            }
         </style>
-        <!-- <nav>
+
+        <nav>
             <ul>
                 <li>
                     <a href="#about">A propos</a>
@@ -52,15 +70,19 @@
                     <a href="#xpPro">Expériences</a>
                 </li>
                 <li>
-                    <a href="#formation">Formation</a>
+                    <a href="#formations">Formations</a>
                 </li>
                 <li>
                     <a href="#skills">Compétences</a>
                 </li>
+                <li>
+                    <a href="#sources">Sources</a>
+                </li>
             </ul>
-        </nav> -->
+            <i class="fa-solid fa-bars fa-lg"></i>
+        </nav>
 
-        <div class="mod-container">
+        <div class="mod-container" id="about">
             <div class="mod">
                 <div class="cube">
                     <div class="faces f1">
@@ -208,7 +230,7 @@
                         style="height: 200px; margin: 50px"
                         alt=""
                     />
-                    <div id="about">
+                    <div>
                         Je suis une personne curieuse et passionnée par les
                         défis techniques. Mon expérience professionnelle acquise
                         lors de mon alternance dans le domaine postal m’a permis
@@ -220,12 +242,107 @@
                     </div>
                 </div>
             </div>
+            <div class="test-container">
+                <h3 style="text-align: center">Informations</h3>
+            </div>
+
+            <style>
+                .information-grid {
+                    display: grid;
+                    grid-template-columns: 50px auto 50px auto;
+                    grid-template-rows: auto auto;
+                    gap: 20px 5px;
+                    grid-auto-flow: row;
+                    justify-content: stretch;
+                    align-content: center;
+                    justify-items: left;
+                    align-items: center;
+                    grid-template-areas:
+                        "fa-age Age fa-num numero"
+                        "fa-addr addr fa-mail mail";
+                }
+
+                .Age {
+                    grid-area: Age;
+                }
+
+                .numero {
+                    grid-area: numero;
+                }
+
+                .fa-age {
+                    grid-area: fa-age;
+                    justify-items: center;
+                }
+
+                .fa-age:hover .fa-solid,
+                .Age:hover + .fa-age .fa-solid {
+                    color: #225cff;
+                }
+
+                .fa-num:hover .fa-solid,
+                .numero:hover + .fa-num .fa-solid {
+                    color: #225cff;
+                }
+
+                .fa-addr:hover .fa-solid,
+                .addr:hover + .fa-addr .fa-solid {
+                    color: #225cff;
+                }
+
+                .fa-mail:hover .fa-solid,
+                .mail:hover + .fa-mail .fa-solid {
+                    color: #225cff;
+                }
+
+                .fa-num {
+                    grid-area: fa-num;
+                    justify-items: center;
+                }
+
+                .fa-addr {
+                    grid-area: fa-addr;
+                    justify-items: center;
+                }
+
+                .addr {
+                    grid-area: addr;
+                }
+
+                .fa-mail {
+                    grid-area: fa-mail;
+                    justify-items: center;
+                }
+
+                .mail {
+                    grid-area: mail;
+                }
+            </style>
+            <div class="test-container">
+                <div class="information-grid">
+                    <div class="Age">23/10/1997 (25 ans)</div>
+                    <div class="fa-age">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div class="numero">06 XX XX XX XX</div>
+                    <div class="fa-num"><i class="fa-solid fa-phone"></i></div>
+                    <div class="addr">40 rue de morvillers 80000 Amiens</div>
+                    <div class="fa-addr"><i class="fa-solid fa-house"></i></div>
+                    <div class="mail">plouisberquez@gmail.com</div>
+                    <div class="fa-mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="container-fluid">
-            <div class="row example-basic">
-                <div class="col-md-12 example-title">
-                    <h2 id="xpPro">Expériences professionnelles</h2>
+            <div class="row example-basic" id="xpPro">
+                <div
+                    class="col-md-12 example-title"
+                    style="margin: 50px 0 30px 0"
+                >
+                    <h2>Expériences professionnelles</h2>
                 </div>
             </div>
             <div class="flex-container">
@@ -246,19 +363,21 @@
                                 <h3 class="timeline-title">
                                     Développeur Full Stack
                                 </h3>
-                                <h4>Université Picardie Jules Verne</h4>
+                                <h4>RiPOSTE Consulting &amp; Services</h4>
+
                                 <p>
-                                    RiPOSTE est un très petite entreprise du
-                                    domaine postal. Elle est spécialisée dans
-                                    l'optimisation des dépôts de courrier. Elle
-                                    propose un service de consulting dans ce
-                                    domaine ainsi qu'une application de suivis
-                                    des dépôts de courrier. Au vu de la taille
-                                    de l'entreprise, j'ai pu toucher à tous les
-                                    aspects du développement d'une application
-                                    web. Que ce soit le développement front-end,
-                                    back-end, la gestion de la base de données,
-                                    gestion DevOps, gestion de projet. Voici mes
+                                    RiPOSTE est une très petite entreprise dans
+                                    le domaine postal. Elle est spécialisée dans
+                                    l’optimisation des dépôts de courrier. Elle
+                                    propose des services de conseil dans ce
+                                    domaine ainsi qu’une application pour suivre
+                                    les dépôts de courrier. Étant donné la
+                                    taille de l’entreprise, j’ai pu toucher à
+                                    tous les aspects du développement d’une
+                                    application web. Que ce soit le
+                                    développement front-end, back-end, la
+                                    gestion de la base de données, la gestion
+                                    DevOps ou la gestion de projet. Voici mes
                                     missions :
                                 </p>
 
@@ -268,7 +387,7 @@
                                         (Front et Back) en C# .NET Core et VueJs
                                     </li>
                                     <li>Maintenance applicative</li>
-                                    <li>Evolution des pipeline CI/CD</li>
+                                    <li>Evolution des pipelines CI/CD</li>
                                     <li>Formation des nouveaux arrivants</li>
                                 </ul>
                             </div>
@@ -289,7 +408,7 @@
                                 <h3 class="timeline-title">
                                     Developpeur Full-Stack
                                 </h3>
-                                <h4>RiPOSTE Consulting &amp; Service</h4>
+                                <h4>RiPOSTE Consulting &amp; Services</h4>
                                 <p>
                                     Ce stage a été réalisé dans le cadre de ma
                                     Licence MIAGE. J'ai pu travailler sur le
@@ -308,9 +427,9 @@
             <!-- FORMATION -->
             <!-- ----------------- -->
 
-            <div class="row example-basic">
+            <div class="row example-basic" id="formations">
                 <div class="col-md-12 example-title">
-                    <h2 id="xpPro">Formations</h2>
+                    <h2>Formations</h2>
                 </div>
             </div>
             <div class="flex-container">
@@ -399,9 +518,9 @@
             <!-- COMPETENCES -->
             <!-- ----------------- -->
 
-            <div class="row example-basic">
+            <div id="skills" class="row example-basic">
                 <div class="col-md-12 example-title">
-                    <h2 id="xpPro">Compétences</h2>
+                    <h2>Compétences</h2>
                 </div>
             </div>
             <div class="flex-container">
@@ -512,9 +631,9 @@
                 </div>
             </div>
 
-            <div class="row example-basic">
+            <div id="sources" class="row example-basic">
                 <div class="col-md-12 example-title">
-                    <h2 id="sources">Sources et documents</h2>
+                    <h2>Sources et documents</h2>
                 </div>
             </div>
             <div class="flex-container">
